@@ -12,7 +12,7 @@
 - **统计仪表盘** — 协议分布饼图、流量统计卡片
 - **数据导出** — 支持 PCAP（Wireshark 兼容）、HAR、cURL 三种格式导出
 - **系统代理管理** — 自动配置和恢复 Windows 系统代理
-- **深色主题** — 开箱即用的深色 UI 主题
+- **深色/浅色主题** — 支持深色和浅色两种主题切换
 
 ## 系统要求
 
@@ -32,8 +32,8 @@
 ### 2. 克隆项目并安装依赖
 
 ```bash
-git clone <repo-url> capture-package
-cd capture-package
+git clone https://github.com/Jelysium/chat-netcatcher.git
+cd chat-netcatcher
 uv sync
 ```
 
@@ -49,7 +49,7 @@ uv run python -m netcatcher
 安装后也可以直接使用命令：
 
 ```bash
-uv run netcatcher
+uv run chat-netcatcher
 ```
 
 ## 使用说明
@@ -143,7 +143,8 @@ src/netcatcher/
 │   └── stats_dashboard.py        # 统计仪表盘
 └── resources/
     └── styles/
-        └── dark.qss              # 深色主题
+        ├── dark.qss              # 深色主题
+        └── light.qss             # 浅色主题
 ```
 
 ## 技术栈
